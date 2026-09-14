@@ -1,59 +1,36 @@
-# Education & EdTech - Student Retention & Welfare Efficacy Tracker
+# Education & EdTech — Student Retention & Welfare Efficacy Tracker
 
 ## Project Overview
 
-The **Student Retention & Welfare Efficacy Tracker** is a data analytics project focused on understanding student attendance, academic performance, mid-day meal utilization, and school infrastructure.
+This project is being developed for the **TransOrg AgentIQ Datathon – Track 4: Education & EdTech**.
 
-The project combines data from multiple education-related datasets and aims to identify patterns and factors that can help understand student welfare and retention at the school and district levels.
+The goal is to build a data-driven system that analyzes **student attendance, academic performance, mid-day meal utilization, and school infrastructure** to identify factors affecting student retention and welfare.
 
-The project will use **Python for data cleaning and analysis** and **Power BI for interactive visualization and dashboard development**.
-
----
+The project focuses on cleaning and integrating multiple datasets and presenting the resulting insights through an interactive dashboard.
 
 ## Work Completed So Far
 
-The following work has been completed:
+### Dataset 1 — School Master
+- Standardized school IDs across datasets.
+- Removed duplicate records.
+- Standardized categorical fields such as district, school type, and medium.
+- Handled missing district and block values using `Unknown`.
+- Validated duplicate school IDs and missing values.
+- Saved the cleaned dataset as:
+  `data/cleaned/school_master_cleaned.csv`
 
-### Project Setup
-- Created the project repository and folder structure.
-- Organized the original datasets inside the `data/raw/` directory.
-- Created a Jupyter notebook for data exploration and cleaning.
-- Added the required Python dependencies in `requirements.txt`.
-
-### Initial Data Audit
-- Loaded all available datasets using Python.
-- Inspected dataset dimensions, columns, data types, and missing values.
-- Identified data-quality issues that need to be handled during preprocessing.
-
-### School Master Data
-- Standardized column names.
-- Standardized `school_id` values across the dataset.
+### Dataset 2 — Student Attendance
+- Standardized school IDs.
+- Standardized and validated date values.
+- Converted attendance-related numeric fields to appropriate numeric types.
+- Identified invalid attendance records where present students exceeded total students.
+- Calculated attendance rate for valid records.
+- Standardized teacher presence values.
+- Standardized attendance records marked by different roles.
 - Removed exact duplicate records.
-- Standardized text fields such as district, school type, and medium.
-- **618 records → 600 records after duplicate removal.**
-- **18 duplicate records removed.**
-
-### Student Attendance Data
-- Standardized column names and `school_id`.
-- Handled multiple date formats and converted them into a consistent datetime format.
-- Converted `total_students` and `present_students` into numeric values.
-- Identified logically impossible attendance records.
-- Created an `attendance_valid` flag for attendance validation.
-- Calculated `attendance_rate` for valid records.
-- Standardized `teacher_present` values into Boolean values.
-
-### Attendance Validation Results
-
-| Metric | Result |
-|---|---:|
-| Total attendance records | 20,800 |
-| Valid attendance records | 19,965 |
-| Invalid records flagged | 835 |
-| Average attendance rate | 80.51% |
-
-The invalid attendance records have been **flagged rather than deleted** so that the data-quality issues can be investigated during further analysis.
-
----
+- Flagged missing record IDs.
+- Saved the cleaned dataset as:
+  `data/cleaned/student_attendance_cleaned.csv`
 
 ## Project Structure
 
@@ -64,7 +41,7 @@ education-retention-tracker/
 │
 ├── data/
 │   ├── raw/
-│   └── processed/
+│   └── cleaned/
 │
 ├── docs/
 │
