@@ -29,7 +29,7 @@ schools may require attention and support.
 |---|---|
 | School Master | Completed |
 | Student Attendance | Completed |
-| Mid-Day Meal Procurement | In Progress |
+| Mid-Day Meal Procurement | Completed |
 | Test Scores | Pending |
 | School Infrastructure | Pending |
 
