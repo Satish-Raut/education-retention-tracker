@@ -9,37 +9,40 @@ utilization, and school infrastructure.
 The goal is to build a data-driven dashboard that helps identify areas where
 schools may require attention and support.
 
-## Work Completed So Far
+## Current Progress
 
-### Dataset 1 — School Master
-- Standardized school IDs
-- Removed duplicate records
-- Standardized categorical fields
-- Handled missing district and block values
-- Validated the cleaned dataset
-- Saved cleaned dataset
+### Data Cleaning
 
-### Dataset 2 — Student Attendance
-- Standardized school IDs
-- Standardized attendance dates
-- Validated student attendance values
-- Identified invalid attendance records
-- Calculated attendance rate
-- Standardized teacher presence values
-- Standardized attendance marked-by values
-- Removed exact duplicate records
-- Identified missing record IDs
-- Flagged Sunday 100% attendance as proxy attendance anomalies
-- Saved cleaned dataset
+- School Master dataset cleaned and validated.
+- Student Attendance dataset cleaned and validated.
+- Attendance duplicate records removed.
+- School IDs, dates, and grade values standardized.
+- Teacher presence and record-marking values standardized.
+- Invalid attendance records flagged instead of being removed.
+- Proxy attendance anomalies identified using Sunday and 100% attendance checks.
+- Missing attendance record IDs retained and flagged.
+- Cleaned datasets are stored separately from the raw datasets.
 
-### Current Progress
+### Completed Datasets
 
-- School Master: Complete
-- Student Attendance: Complete
-- Mid-Day Meal Procurement: In progress
-- Test Scores: Pending
-- School Infrastructure: Pending
-- Dashboard: Pending
+| Dataset | Status |
+|---|---|
+| School Master | Completed |
+| Student Attendance | Completed |
+| Mid-Day Meal Procurement | In Progress |
+| Test Scores | Pending |
+| School Infrastructure | Pending |
+
+### Attendance Cleaning Summary
+
+| Metric | Result |
+|---|---:|
+| Raw records | 20,800 |
+| Cleaned records | 20,000 |
+| Duplicate records removed | 800 |
+| Impossible attendance records flagged | 806 |
+| Proxy attendance records flagged | 979 |
+| Missing record IDs | 405 |
 
 ## Project Structure
 
